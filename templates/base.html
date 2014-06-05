@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.2/css/ink-flex.min.css">
+    </head>
+    <body>
+        <div class="ink-grid" style="padding-top: 50px;">
+            <div class="column-group push-center push-middle">
+                <div class="all-80">
+                    <h1>S3 Browser</h1> <br />
+                    {% block select_buckets %}{% endblock %}
+                    {% block objects %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

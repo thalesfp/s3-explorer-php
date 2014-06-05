@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}S3 Browser{% endblock %}
+
+{% block select_buckets %}
+<form method="post" class="ink-form">
+	<label>Bucket</label>
+	<select name="bucket" id="bucket" onchange="this.form.submit()">
+	{% for bucket in buckets %}
+		<option {{ bucket.Name | selected }}>{{ bucket.Name }}</option>
+	{% endfor %}
+	</select>
+	<br /><br />
+</form>
+{% endblock %}
+
+{% block objects %}
+    <table class="ink-table hover">
+        <tr>
+            <th class="align-left">Filename</th>
+            <th class="align-left">Size</th>
+            <th class="align-left">Last Modified</th>
+        </tr>
+        {% for object in objects %}
+        <tr>
+            <td><a href="{{object.Url}}">{{ object.Key }}</a></td>
+            <td>{{ object.Size | formatBytes }}</td>
+            <td>{{ object.LastModified | formatDateTime }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
