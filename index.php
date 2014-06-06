@@ -22,7 +22,7 @@ $twig->addFilter($filter_format_datetime);
 
 $s3 = new S3($access_key, $secret_key);
 
-if (array_key_exists("bucket", $ini_array)) {
+if (array_key_exists("bucket", $ini_array) and $ini_array["bucket"] != "") {
     $buckets = NULL;
     $selected_bucket = $ini_array["bucket"];
 } else {
