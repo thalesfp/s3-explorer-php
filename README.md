@@ -5,12 +5,16 @@ A browser for Amazon S3 written in PHP.
 
 ## Getting Started
 
-1. Run composer to install the dependencies
+1. Clone this repository
+
+        git clone https://github.com/thalesfp/s3-explorer-php.git
+
+2. Run composer to install the dependencies
 
         composer install
 
-2. Set your access key and secret key in config.ini
-3. Optionally set a specific bucket in config.ini
+3. Set your access key and secret key in config.ini
+4. Optionally set a specific bucket in config.ini
 
 Example of config.ini:
         
