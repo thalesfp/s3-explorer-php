@@ -4,7 +4,7 @@
 
 {% block select_buckets %}
 {% if buckets %}
-<form method="post" class="ink-form" style="padding-bottom: 50px;">
+<form method="post" id="form_buckets" class="ink-form">
     <label>Bucket</label>
     <select name="bucket" id="bucket" onchange="this.form.submit()">
     {% for bucket in buckets %}

@@ -4,12 +4,13 @@
         <title>{{ block("title") }}</title>
         <link rel="stylesheet" href="//cdn.ink.sapo.pt/3.0.2/css/ink-flex.min.css">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="templates/style.css">
         <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
         <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/505bef35b56/sorting/file-size.js"></script>
     </head>
     <body>
-        <div class="ink-grid" style="padding: 50px 0 50px 0;">
+        <div id="content" class="ink-grid">
             <div class="column-group push-center push-middle">
                 <div class="all-80">
                     <h1>{{ block("title") }}</h1> <br />
