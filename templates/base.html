@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}{% endblock %}</title>
+        <title>{{ block("title") }}</title>
         <link rel="stylesheet" href="//cdn.ink.sapo.pt/3.0.2/css/ink-flex.min.css">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
         <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -12,9 +12,9 @@
         <div class="ink-grid" style="padding: 50px 0 50px 0;">
             <div class="column-group push-center push-middle">
                 <div class="all-80">
-                    <h1>S3 Browser</h1> <br />
-                    {% block select_buckets %}{% endblock %}
-                    {% block objects %}{% endblock %}
+                    <h1>{{ block("title") }}</h1> <br />
+                    {{ block("select_buckets") }}
+                    {{ block("objects") }}
                 </div>
             </div>
         </div>
