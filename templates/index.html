@@ -3,6 +3,7 @@
 {% block title %}S3 Browser{% endblock %}
 
 {% block select_buckets %}
+{% if buckets %}
 <form method="post" class="ink-form" style="padding-bottom: 50px;">
 	<label>Bucket</label>
 	<select name="bucket" id="bucket" onchange="this.form.submit()">
@@ -11,6 +12,7 @@
 	{% endfor %}
 	</select>
 </form>
+{% endif %}
 {% endblock %}
 
 {% block objects %}
