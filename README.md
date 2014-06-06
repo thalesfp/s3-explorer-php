@@ -1,7 +1,7 @@
-s3-explorer-php
+S3 Explorer
 ===============
 
-Browser for Amazon S3
+A browser for Amazon S3 written in PHP.
 
 ## Getting Started
 
